@@ -8,6 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
         Conta conta = new Conta();
+        Conta conta2 = new Conta();
 
         // entrada de dados
         System.out.print("Correntista --> ");
@@ -29,5 +30,9 @@ public class Main {
         // imprime o saldo
         System.out.println("saldo atual: R$ " + conta.saldo);
 
+        // transferência da conta para conta2
+        conta.transferir(200, conta2);
+        System.out.println(conta.saldo);
+        System.out.println(conta2.saldo);
     }
 }

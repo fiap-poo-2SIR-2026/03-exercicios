@@ -13,4 +13,8 @@ public class Conta {
         saldo = saldo + valor;
     }
 
+    public void transferir(double valor, Conta destino) {
+        sacar(valor);
+        destino.depoisitar(valor);
+    }
 }
